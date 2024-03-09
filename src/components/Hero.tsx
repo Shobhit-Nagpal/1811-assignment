@@ -9,11 +9,11 @@ export default function Hero() {
         <span className="mx-2">All the top creator tools in one place</span>
         <Sparkle className="text-[#4B4B4B] fill-current" />
       </div>
-      <h1 className="text-3xl sm:text-5xl lg:text-7xl font-medium text-gray-800 mb-8">
+      <h1 className="text-3xl sm:text-5xl lg:text-7xl font-normal text-gray-800 mb-8">
         <span className="text-white font-bold font-outline-4 drop-shadow-[5px_5px_0px_rgba(228,77,128,1)]">
           Top Creator tools
         </span>{" "}
-        for making those <span className="font-bold">videos go viral</span> 🚀
+        for making those <span className="font-semibold">videos go viral</span> 🚀
       </h1>
       <p className="text-[#91908F] font-medium mb-12 text-xl sm:text-2xl lg:text-3xl sm:px-16">
         We are ready to be your creator co-pilot. Generate ideas, SEO friendly
