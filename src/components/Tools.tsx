@@ -39,7 +39,7 @@ export default function Tools() {
         Click on any tool below and explore
       </h2>
       <ArrowDown className="text-[#FFDEE9]" />
-      <div className="flex items-center justify-center gap-x-4 mt-4">
+      <div className="w-full flex items-center justify-between gap-x-4 mt-4">
         {tools.slice(0, 2).map((tool) => (
           <Tool
             icon={tool.icon}
@@ -48,7 +48,7 @@ export default function Tools() {
           />
         ))}
       </div>
-      <div className="flex items-center justify-center gap-x-4 mt-4">
+      <div className="w-full flex items-center justify-between gap-x-4 mt-4">
         {tools.slice(2, tools.length).map((tool) => (
           <Tool
             icon={tool.icon}

@@ -2,7 +2,7 @@ import { Button } from "./ui/button";
 
 export default function SubscribeCTA() {
   return (
-    <div className="max-w-7xl mt-16 px-32 py-16 flex items-center justify-around bg-[#FFFAFB] border-2 border-solid border-[#E2E2E2] drop-shadow-[0px_0px_8px_rgba(166,166,166,0.14)] gap-x-96 rounded-lg">
+    <div className="w-full mt-16 px-32 py-16 flex items-center justify-around bg-[#FFFAFB] border-2 border-solid border-[#E2E2E2] drop-shadow-[0px_0px_8px_rgba(166,166,166,0.14)] gap-x-96 rounded-lg">
       <div>
         <h2 className="text-4xl font-semibold text-[#0B132A] mb-5">Want to know more about the tools?</h2>
         <p className="text-[#91908F] text-base">Join the club and explore all the free tools...</p>
