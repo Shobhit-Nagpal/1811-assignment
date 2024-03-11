@@ -43,7 +43,7 @@ export default function LinkedPostGenerator() {
   ];
 
   return (
-    <main className="min-h-screen pl-20">
+    <main className="min-h-screen pl-20 w-full">
       <div className="flex items-start justify-center">
         <div className="w-1/2 flex flex-col items-start justify-center gap-y-12 mt-12">
           <Logo />
