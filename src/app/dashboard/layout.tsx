@@ -1,15 +1,9 @@
-import type { Metadata } from "next";
+import Navbar from "@/components/Navbar";
 import { Inter } from "next/font/google";
-import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Creatortools.ai",
-  description: "Tools for creators, empowered by AI",
-};
-
-export default function RootLayout({
+export default function DashboardLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

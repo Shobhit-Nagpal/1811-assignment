@@ -1,32 +1,28 @@
 import { ArrowDown } from "lucide-react";
-import videoIdeaGeneratorIcon from "../../public/highlight.svg";
-import freeAudiogramGeneratorIcon from "../../public/audiogram.svg";
-import yt2BlogIcon from "../../public/yt2Blog.svg";
-import yt2LinkedinIcon from "../../public/yt2Linkedin.svg";
 import Tool from "./Tool";
 
 export default function Tools() {
   const tools = [
     {
-      icon: videoIdeaGeneratorIcon,
+      icon: "/highlight.svg",
       name: "Video Idea Generator",
       description:
         "Generate 10 unique ideas for your next viral video. Forget the creative block",
     },
     {
-      icon: freeAudiogramGeneratorIcon,
+      icon: "/audiogram.svg",
       name: "Free Audiogram Generator",
       description:
         "Generate 10 unique ideas for your next viral video. Forget the creative block",
     },
     {
-      icon: yt2BlogIcon,
+      icon: "/yt2Blog.svg",
       name: "Youtube Video to SEO Blog Generator",
       description:
         "Generate 10 unique ideas for your next viral video. Forget the creative block",
     },
     {
-      icon: yt2LinkedinIcon,
+      icon: "/yt2Linkedin.svg",
       name: "Youtube Video to LinkedIn Post Generator",
       description:
         "Generate 10 unique ideas for your next viral video. Forget the creative block",
