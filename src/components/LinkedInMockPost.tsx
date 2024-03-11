@@ -48,11 +48,12 @@ export default function LinkedInMockPost({
       <div>
         <p className="text-[#0966C2] font-semibold mb-4">See translation</p>
         <div className="flex items-center justify-center gap-x-1">
-          {reactions.map((reaction) => (
+          {reactions.map((reaction, idx) => (
             <Image
+              key={idx}
               src={reaction}
-              width={21}
-              height={21}
+              width={24}
+              height={24}
               alt="Mock Profile Image"
             />
           ))}
