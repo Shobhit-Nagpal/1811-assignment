@@ -45,7 +45,7 @@ export default function PostGenForm() {
   return (
     <div className="w-full">
       <div className="mb-8">
-        <div>
+        <div className="flex flex-col items-center lg:items-start justify-center">
           <label
             htmlFor="link"
             className="font-medium text-lg text-[#363430] block"
@@ -62,7 +62,7 @@ export default function PostGenForm() {
           />
         </div>
 
-        <div className="mt-10">
+        <div className="mt-10 flex flex-col items-center lg:items-start justify-center">
           <label
             htmlFor="mood"
             className="font-medium text-lg text-[#363430] block"
@@ -78,7 +78,7 @@ export default function PostGenForm() {
             onChange={(e) => setMood(e.target.value)}
           />
         </div>
-        <div className="flex items-center justify-start mt-12">
+        <div className="flex items-center justify-center lg:justify-start mt-12">
           <Button
             onClick={() => createPost({ link, mood })}
             className="w-5/6 bg-[linear-gradient(to_bottom,#5072EA,#3F5ECD)] drop-shadow-[0px_0px_0px_rgba(169,18.69,1)] drop-shadow-[0px_4px_6px_rgba(0,0,0,0.14)] shadow-[0px_-2px_1px{rgba(0,0,0,.14)}] border-2 border-solid border-[#3F5ECD] text-white p-6 text-lg rounded-lg font-bold transition-all hover:bg-pink-700 mb-6"
