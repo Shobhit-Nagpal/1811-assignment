@@ -1,9 +1,9 @@
 import { createClient } from "@/lib/supabase/server";
 import { NextRequest } from "next/server";
 
-const supabase = createClient();
 
 export async function POST(req: NextRequest) {
+  const supabase = createClient();
   const body = await req.json();
   const { link, mood } = body;
 
