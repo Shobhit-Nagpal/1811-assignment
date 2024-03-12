@@ -9,11 +9,13 @@ async function getLinkedInPosts() {
 
 export default async function YTVideoToLinkedInPostPage() {
   // call the getLinkedInPosts here
+  /*
   const supabase = createClient();
   const { data, error } = await supabase.auth.getUser();
   if (error || !data?.user) {
     redirect("/login");
   }
+  */
 
   const generatedPosts = [
     {
