@@ -1,31 +1,42 @@
 import { ArrowDown } from "lucide-react";
 import Tool from "./Tool";
+import { useRouter } from "next/navigation";
 
 export default function Tools() {
+
+  const router = useRouter();
+
+  function handleToolClick(url: string) {
+    router.push(url);
+  }
   const tools = [
     {
       icon: "/highlight.svg",
       name: "Video Idea Generator",
       description:
         "Generate 10 unique ideas for your next viral video. Forget the creative block",
+      url: "/",
     },
     {
       icon: "/audiogram.svg",
       name: "Free Audiogram Generator",
       description:
         "Generate 10 unique ideas for your next viral video. Forget the creative block",
+      url: "/",
     },
     {
       icon: "/yt2Blog.svg",
       name: "Youtube Video to SEO Blog Generator",
       description:
         "Generate 10 unique ideas for your next viral video. Forget the creative block",
+      url: "/",
     },
     {
       icon: "/yt2Linkedin.svg",
       name: "Youtube Video to LinkedIn Post Generator",
       description:
         "Generate 10 unique ideas for your next viral video. Forget the creative block",
+      url: "/post-gen",
     },
   ];
   return (
@@ -42,6 +53,8 @@ export default function Tools() {
             icon={tool.icon}
             name={tool.name}
             description={tool.description}
+            url={tool.url}
+            onClick={handleToolClick}
           />
         ))}
       </div>
@@ -52,6 +65,8 @@ export default function Tools() {
             icon={tool.icon}
             name={tool.name}
             description={tool.description}
+            url={tool.url}
+            onClick={handleToolClick}
           />
         ))}
       </div>
