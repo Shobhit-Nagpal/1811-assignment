@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function SignUpPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start p-6 mt-20">
+    <main className="flex min-h-screen flex-col items-center justify-start p-6 mt-5">
       <Logo />
       <div className="mt-20 flex flex-col items-center justify-center w-full sm:w-1/2 gap-y-4">
         <div className="flex flex-col items-center justify-center mb-8">
