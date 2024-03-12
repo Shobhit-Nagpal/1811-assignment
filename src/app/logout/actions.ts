@@ -12,5 +12,5 @@ export async function logout() {
   }
 
   console.log("Logged out");
-  redirect("/login");
+  redirect("/");
 }

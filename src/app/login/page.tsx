@@ -17,33 +17,40 @@ export default function LoginPage() {
         </div>
         <form className="mb-8 w-full">
           <div className="flex flex-col items-center justify-center mb-4">
-            <label className="font-medium text-lg text-[#363430] block">
+            <label htmlFor="email" className="font-medium text-lg text-[#363430] block">
               Email
             </label>
             <input
               className="shadow appearance-none border rounded-lg w-5/6 py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="email"
+              name="email"
               type="email"
               placeholder="example@gmail.com"
             />
           </div>
 
           <div className="flex flex-col items-center justify-center mb-4">
-            <label className="font-medium text-lg text-[#363430] block">
+            <label htmlFor="email" className="font-medium text-lg text-[#363430] block">
               Password
             </label>
             <input
               className="shadow appearance-none border rounded-lg w-5/6 py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="password"
+              name="password"
               type="password"
               placeholder="*********"
             />
           </div>
+          <div className="flex items-center justify-center mt-12">
+            <Button
+              formAction={login}
+              className="w-5/6 bg-[linear-gradient(to_bottom,#5072EA,#3F5ECD)] drop-shadow-[0px_0px_0px_rgba(169,18.69,1)] drop-shadow-[0px_4px_6px_rgba(0,0,0,0.14)] shadow-[0px_-2px_1px{rgba(0,0,0,.14)}] border-2 border-solid border-[#3F5ECD] text-white p-6 text-lg rounded-lg font-bold transition-all hover:bg-pink-700 mb-6"
+            >
+              Login <ChevronRight />
+            </Button>
+          </div>
         </form>
 
-        <Button className="w-5/6 bg-[linear-gradient(to_bottom,#5072EA,#3F5ECD)] drop-shadow-[0px_0px_0px_rgba(169,18.69,1)] drop-shadow-[0px_4px_6px_rgba(0,0,0,0.14)] shadow-[0px_-2px_1px{rgba(0,0,0,.14)}] border-2 border-solid border-[#3F5ECD] text-white p-6 text-lg rounded-lg font-bold transition-all hover:bg-pink-700 mb-6">
-          Login <ChevronRight />
-        </Button>
         <p className="text-[#91908F] text-lg">
           Don&#39;t have an account?{" "}
           <Link href="/sign-up" className="text-pink font-semibold underline">

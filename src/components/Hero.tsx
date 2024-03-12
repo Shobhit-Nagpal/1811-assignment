@@ -3,8 +3,17 @@ import { ArrowDown, ChevronRight, Sparkle } from "lucide-react";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
 
-export default function Hero() {
+type HeroProps = {
+  isAuthenticated: boolean;
+}
+
+export default function Hero({isAuthenticated}: HeroProps) {
   const router = useRouter();
+
+  function handleDashboardClick() {
+    router.push("/dashboard/post-gen");
+  }
+
   function handleLoginClick() {
     router.push("/login");
   }
@@ -25,9 +34,15 @@ export default function Hero() {
         We are ready to be your creator co-pilot. Generate ideas, SEO friendly
         blogs & LinkedIn posts from videos, Audiograms
       </p>
-      <Button className="bg-[linear-gradient(to_bottom,#FF81AC,#FF3F80)] drop-shadow-[0px_0px_0px_rgba(169,18.69,1)] drop-shadow-[0px_4px_6px_rgba(0,0,0,0.14)] shadow-[0px_-2px_1px{rgba(0,0,0,.14)}] border-2 border-solid border-[#FF81AC] text-white p-6 text-lg rounded-lg font-bold transition-all hover:bg-pink-700 mb-6" onClick={() => handleLoginClick()}>
-        Login and explore <ChevronRight />
+      {isAuthenticated ? 
+      <Button className="bg-[linear-gradient(to_bottom,#FF81AC,#FF3F80)] drop-shadow-[0px_0px_0px_rgba(169,18.69,1)] drop-shadow-[0px_4px_6px_rgba(0,0,0,0.14)] shadow-[0px_-2px_1px{rgba(0,0,0,.14)}] border-2 border-solid border-[#FF81AC] text-white p-6 text-lg rounded-lg font-bold transition-all hover:bg-pink-700 mb-6" onClick={() => handleDashboardClick()}>
+      Dashboard <ChevronRight />
       </Button>
+      : 
+      <Button className="bg-[linear-gradient(to_bottom,#FF81AC,#FF3F80)] drop-shadow-[0px_0px_0px_rgba(169,18.69,1)] drop-shadow-[0px_4px_6px_rgba(0,0,0,0.14)] shadow-[0px_-2px_1px{rgba(0,0,0,.14)}] border-2 border-solid border-[#FF81AC] text-white p-6 text-lg rounded-lg font-bold transition-all hover:bg-pink-700 mb-6" onClick={() => handleLoginClick()}>
+      Login and explore <ChevronRight />
+      </Button>
+      }
       <p className="flex items-center justify-center gap-x-2 text-pink font-semibold mb-12 text-xl px-16">
         <ArrowDown className="text-[#FFDEE9]" />
         scroll down to explore <ArrowDown className="text-[#FFDEE9]" />

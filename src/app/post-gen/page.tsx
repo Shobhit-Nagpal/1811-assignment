@@ -1,8 +1,18 @@
 import Logo from "@/components/Logo";
 import PostGenForm from "@/components/PostGenForm";
 import LinkedInMockPost from "@/components/LinkedInMockPost";
+import { redirect } from "next/navigation";
+import { createClient } from "@/lib/supabase/server";
 
-export default function LinkedPostGenerator() {
+export default async function LinkedPostGenerator() {
+
+  const supabase = createClient();
+
+  const { data, error } = await supabase.auth.getUser();
+  if (error || !data?.user) {
+    redirect("/login");
+  }
+
   const posts = [
     {
       img: "/panda.png",

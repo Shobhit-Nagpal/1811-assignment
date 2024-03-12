@@ -8,8 +8,10 @@ import { createClient } from '@/lib/supabase/server'
 export async function signup(formData: FormData) {
   const supabase = createClient()
 
-  // type-casting here for convenience
-  // in practice, you should validate your inputs
+  if (formData.get("password") !== formData.get("confirmedPassword")) {
+    redirect("/error");
+  }
+
   const data = {
     email: formData.get('email') as string,
     password: formData.get('password') as string,
