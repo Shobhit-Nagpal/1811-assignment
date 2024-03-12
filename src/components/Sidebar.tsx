@@ -40,15 +40,15 @@ export default function Sidebar() {
   return (
     <div className="w-1/4 h-screen p-8 flex flex-col items-start justify-start border-solid border-2 border-[#F5F5F5] gap-y-10">
       <Logo />
-      <div>
-        <h3 className="text-[#91908F] font-bold text-lg">ALL CREATOR TOOLS</h3>
+      <div className="w-full">
+        <h3 className="text-[#91908F] font-bold text-lg p-4">ALL CREATOR TOOLS</h3>
         <div className="mt-6 flex flex-col items-start justify-center gap-y-3">
           {tools.map((tool, idx) => (
             <div
               key={idx}
               className={cn(
                 tool.active ? "bg-[#F5F5F5] rounded-lg" : null,
-                "py-4 px-8 flex items-center justify-start gap-x-4 hover:cursor-pointer",
+                "p-4 w-full flex items-center justify-start gap-x-4 hover:cursor-pointer",
               )}
               onClick={() => reRoute(tool.path)}
             >
