@@ -1,7 +1,13 @@
+"use client";
 import { ArrowDown, ChevronRight, Sparkle } from "lucide-react";
 import { Button } from "./ui/button";
+import { useRouter } from "next/navigation";
 
 export default function Hero() {
+  const router = useRouter();
+  function handleLoginClick() {
+    router.push("/login");
+  }
   return (
     <div className="container mx-auto px-6 py-12 bg-white text-center flex flex-col items-center justify-center">
       <div className="mb-6 bg-[#FBFBFB] border-solid border-2 border-[#E2E2E2] rounded-full w-fit p-2 font-semibold text-[#363430] flex items-center justify-center">
@@ -19,7 +25,7 @@ export default function Hero() {
         We are ready to be your creator co-pilot. Generate ideas, SEO friendly
         blogs & LinkedIn posts from videos, Audiograms
       </p>
-      <Button className="bg-[linear-gradient(to_bottom,#FF81AC,#FF3F80)] drop-shadow-[0px_0px_0px_rgba(169,18.69,1)] drop-shadow-[0px_4px_6px_rgba(0,0,0,0.14)] shadow-[0px_-2px_1px{rgba(0,0,0,.14)}] border-2 border-solid border-[#FF81AC] text-white p-6 text-lg rounded-lg font-bold transition-all hover:bg-pink-700 mb-6">
+      <Button className="bg-[linear-gradient(to_bottom,#FF81AC,#FF3F80)] drop-shadow-[0px_0px_0px_rgba(169,18.69,1)] drop-shadow-[0px_4px_6px_rgba(0,0,0,0.14)] shadow-[0px_-2px_1px{rgba(0,0,0,.14)}] border-2 border-solid border-[#FF81AC] text-white p-6 text-lg rounded-lg font-bold transition-all hover:bg-pink-700 mb-6" onClick={() => handleLoginClick()}>
         Login and explore <ChevronRight />
       </Button>
       <p className="flex items-center justify-center gap-x-2 text-pink font-semibold mb-12 text-xl px-16">
