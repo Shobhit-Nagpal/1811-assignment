@@ -21,7 +21,7 @@ export default function PostGenForm() {
     const moodFinal = `#${mood.split(",").join("#").replace(/ /g, "")}`;
 
     try {
-      const res = await fetch(`${BASE_URL}/api/generate-post`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/generate-post`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
