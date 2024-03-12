@@ -31,11 +31,11 @@ export default function Tools() {
   return (
     <div className="flex flex-col justify-center items-center">
       <p className="text-pink mb-8 text-lg">All of our tools</p>
-      <h2 className="text-5xl font-medium text-[#060B13] mb-4">
+      <h2 className="text-3xl md:text-5xl font-medium text-[#060B13] mb-4">
         Click on any tool below and explore
       </h2>
       <ArrowDown className="text-[#FFDEE9]" />
-      <div className="w-full flex items-center justify-between gap-x-4 mt-4">
+      <div className="w-full flex flex-col md:flex-row gap-y-6 items-center justify-between gap-x-4 mt-4">
         {tools.slice(0, 2).map((tool, idx) => (
           <Tool
             key={idx}
@@ -45,7 +45,7 @@ export default function Tools() {
           />
         ))}
       </div>
-      <div className="w-full flex items-center justify-between gap-x-4 mt-4">
+      <div className="w-full flex flex-col md:flex-row gap-y-6 items-center justify-between gap-x-4 mt-4">
         {tools.slice(2, tools.length).map((tool, idx) => (
           <Tool
             key={idx}

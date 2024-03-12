@@ -10,7 +10,7 @@ export default function Navbar() {
     router.push("/login");
   }
   return (
-    <div className="flex items-center justify-between w-5/6 my-10 px-12 sm:px-20">
+    <div className="flex items-center justify-between w-full sm:w-5/6 my-10 px-6 sm:px-12">
       <Logo />
       <div>
         <Button variant="outline" className="text-lg font-bold" onClick={() => handleLoginClick()}>

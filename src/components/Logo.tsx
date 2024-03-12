@@ -10,7 +10,7 @@ export default function Logo() {
   return (
     <div className="flex items-center justify-center gap-4 hover:cursor-pointer" onClick={() => handleLogoClick()}>
       <Image src="/mark.svg" alt="Logo" width={27} height={36} />
-      <h1 className="font-bold text-3xl text-[#363430] hidden sm:block">
+      <h1 className="font-bold text-3xl text-[#363430] hidden md:block">
         Creatortools.ai
       </h1>
     </div>
