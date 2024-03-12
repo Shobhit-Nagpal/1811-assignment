@@ -1,12 +1,20 @@
 import { Button } from "@/components/ui/button";
 import GeneratedPost from "@/components/GeneratedPost";
+import { createClient } from "@/lib/supabase/server";
+import { redirect } from "next/navigation";
 
 async function getLinkedInPosts() {
   //do a fetch here
 }
 
-export default function YTVideoToLinkedInPostPage() {
+export default async function YTVideoToLinkedInPostPage() {
   // call the getLinkedInPosts here
+  const supabase = createClient();
+  const { data, error } = await supabase.auth.getUser();
+  if (error || !data?.user) {
+    redirect("/login");
+  }
+
   const generatedPosts = [
     {
       icon: "/postIcon1.svg",
@@ -49,9 +57,15 @@ export default function YTVideoToLinkedInPostPage() {
       <div className="p-6 ml-10 flex flex-col items-start justify-center gap-8">
         <p className="text-[#363430] text-xl font-medium">Results</p>
         <div className="md:grid md:grid-cols-2 sm:flex sm:flex-col gap-6">
-        {generatedPosts.map((post, idx) => (
-          <GeneratedPost key={idx} icon={post.icon} title={post.title} content={post.content} tags={post.tags} />
-        ))}
+          {generatedPosts.map((post, idx) => (
+            <GeneratedPost
+              key={idx}
+              icon={post.icon}
+              title={post.title}
+              content={post.content}
+              tags={post.tags}
+            />
+          ))}
         </div>
       </div>
     </main>
