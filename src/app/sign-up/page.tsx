@@ -66,7 +66,7 @@ export default function SignUpPage() {
 
         <p className="text-[#91908F] text-lg">
           Already have an account?{" "}
-          <Link href="/sign-up" className="text-pink font-semibold underline">
+          <Link href="/login" className="text-pink font-semibold underline">
             Login
           </Link>
         </p>
