@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import GeneratedPost from "@/components/GeneratedPost";
 import { createClient } from "@/lib/supabase/client";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { logout } from "@/app/logout/actions";
 import { useEffect, useState } from "react";
 
@@ -14,16 +14,11 @@ type GeneratedPost = {
 };
 
 export default function YTVideoToLinkedInPostPage() {
-  const [userId, setUserId] = useState<string>("");
   const [generatedPosts, setGeneratedPosts] = useState<GeneratedPost[]>([]);
   const router = useRouter();
   const supabase = createClient();
-  // call the getLinkedInPosts here
   async function getLinkedInPosts(user_id: string) {
-    // do a fetch here
     
-    console.log("User id: ", user_id);
-
     if (user_id === "") {
       router.push("/error");
     }
@@ -34,7 +29,6 @@ export default function YTVideoToLinkedInPostPage() {
       .select(`post_title, post_content, post_tags`)
       .eq("user_id", user_id);
 
-    console.log(data);
     if (error) {
       router.push("/error");
     }
@@ -52,7 +46,6 @@ export default function YTVideoToLinkedInPostPage() {
         console.error(error);
         router.push("/login");
       } else {
-        setUserId(data.user.id);
         const posts = await getLinkedInPosts(data.user.id);
         setGeneratedPosts(posts);
       }
