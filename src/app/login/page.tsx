@@ -45,7 +45,7 @@ export default function LoginPage() {
           Login <ChevronRight />
         </Button>
         <p className="text-[#91908F] text-lg">
-          Don't have an account?{" "}
+          Don&#39;t have an account?{" "}
           <Link href="/sign-up" className="text-pink font-semibold underline">
             Sign up
           </Link>
